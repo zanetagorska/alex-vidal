@@ -823,10 +823,13 @@ li {
 .btn {
   font-size: 16px;
   font-weight: 500;
-}
-.btn.invert {
   color: #fff;
   background: #212121;
+}
+.btn.btn-invert {
+  color: #212121;
+  background: #fff;
+  border: solid 1px #212121;
 }
 .number {
   font-size: 100px;
@@ -872,16 +875,16 @@ a:focus {
   display: block !important;
 }
 @media screen and (min-width: 992px) {
-  nav.navbar {
+  header nav.navbar {
     margin-left: 58.33333333%;
   }
 }
 @media screen and (min-width: 992px) {
-  nav.navbar .fa {
+  header nav.navbar .fa {
     display: none;
   }
 }
-nav.navbar ul {
+header nav.navbar ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -889,23 +892,24 @@ nav.navbar ul {
   display: none;
 }
 @media screen and (min-width: 992px) {
-  nav.navbar ul {
+  header nav.navbar ul {
     display: block;
   }
 }
-nav.navbar ul li {
+header nav.navbar ul li {
   display: block;
 }
 @media screen and (min-width: 992px) {
-  nav.navbar ul li {
+  header nav.navbar ul li {
     display: inline-block;
   }
 }
-nav.navbar ul li a {
+header nav.navbar ul li a {
   text-decoration: none;
   color: #212121;
   padding: 0 19px;
 }
-.logo {
+header .logo {
   font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
 }

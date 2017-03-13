@@ -33,11 +33,13 @@ h3 {
   font-weight: 700;
 }
 // h3 My resent works -> Project Title
+// h3 Fun facts -> Years Experience
 h4 {
   font-size: 24px;
   font-weight: 700;
 }
 // h4 What i do -> front end
+// h4 My skills -> Html css
 p, li {
   font-size: 16px;
   font-weight: 400;
@@ -45,9 +47,12 @@ p, li {
 .btn {
   font-size: 16px;
   font-weight: 500;
-  &.invert {
-    color: #fff;
-    background: @black;
+  color: #fff;
+  background: @black;
+  &.btn-invert {
+    color: @black;
+    background: #fff;
+    border: solid 1px @black;
   }
 }
 .number {
