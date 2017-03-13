@@ -874,10 +874,21 @@ a:focus {
 .show {
   display: block !important;
 }
-@media screen and (min-width: 992px) {
+header nav.navbar {
+  margin: 0 auto;
+  padding: 48px 0;
+  width: 970px;
+}
+@media screen and (min-width: 1200px) {
   header nav.navbar {
-    margin-left: 58.33333333%;
+    width: 1170px;
   }
+}
+header nav.navbar .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  float: left;
 }
 @media screen and (min-width: 992px) {
   header nav.navbar .fa {
@@ -894,10 +905,12 @@ header nav.navbar ul {
 @media screen and (min-width: 992px) {
   header nav.navbar ul {
     display: block;
+    float: right;
   }
 }
 header nav.navbar ul li {
   display: block;
+  padding: 0 16px;
 }
 @media screen and (min-width: 992px) {
   header nav.navbar ul li {
@@ -907,9 +920,13 @@ header nav.navbar ul li {
 header nav.navbar ul li a {
   text-decoration: none;
   color: #212121;
-  padding: 0 19px;
 }
-header .logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+header nav.navbar ul li a:hover {
+  border-bottom: 2px solid #212121;
+}
+header nav.navbar ul li:first-child {
+  padding-left: 0;
+}
+header nav.navbar ul li:last-child {
+  padding-right: 0;
 }

@@ -1,7 +1,17 @@
 header {
   nav.navbar {
-    @media screen and (min-width: @screen-md) {
-    margin-left: 58.33333333%;
+    margin: 0 auto;
+    padding: 48px 0;
+    width: 970px;
+    @media screen and (min-width: @screen-lg) {
+      width: 1170px;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      float: left;
     }
 
     .fa {
@@ -18,26 +28,30 @@ header {
       display: none;
       @media screen and (min-width: @screen-md) {
         display: block;
+        float: right;
       }
-
       li {
         display: block;
+        padding: 0 16px;
         @media screen and (min-width: @screen-md) {
           display: inline-block;
         }
-
         a {
           text-decoration: none;
           color: @black;
-          padding: 0 19px;
+
+          &:hover {
+            border-bottom: 2px solid @black;
+          }
         }
       }
+      li:first-child {
+        padding-left: 0;
+      }
+      li:last-child {
+        padding-right: 0;
+      }
     }
-  }
-
-  .logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
   }
 }
 
