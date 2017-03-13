@@ -5,6 +5,7 @@ html {
 }
 body {
   margin: 0;
+  padding: 0;
 }
 * {
   box-sizing: border-box;
@@ -869,6 +870,41 @@ a:focus {
 }
 .show {
   display: block !important;
+}
+@media screen and (min-width: 992px) {
+  nav.navbar {
+    margin-left: 58.33333333%;
+  }
+}
+@media screen and (min-width: 992px) {
+  nav.navbar .fa {
+    display: none;
+  }
+}
+nav.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  nav.navbar ul {
+    display: block;
+  }
+}
+nav.navbar ul li {
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  nav.navbar ul li {
+    display: inline-block;
+  }
+}
+nav.navbar ul li a {
+  text-decoration: none;
+  color: #212121;
+  padding: 0 19px;
 }
 .logo {
   font-family: 'Montserrat', sans-serif;

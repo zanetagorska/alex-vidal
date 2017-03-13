@@ -1,3 +1,39 @@
+nav.navbar {
+  @media screen and (min-width: @screen-md) {
+  margin-left: 58.33333333%;
+  }
+
+  .fa {
+    @media screen and (min-width: @screen-md) {
+      display: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+    display: none;
+    @media screen and (min-width: @screen-md) {
+      display: block;
+    }
+
+    li {
+      display: block;
+      @media screen and (min-width: @screen-md) {
+        display: inline-block;
+      }
+
+      a {
+        text-decoration: none;
+        color: @black;
+        padding: 0 19px;
+      }
+    }
+  }
+}
+
 .logo {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
