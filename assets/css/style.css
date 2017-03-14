@@ -8,6 +8,8 @@ body {
   padding: 0;
 }
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 *:before,
@@ -796,10 +798,12 @@ body {
 h1 {
   font-size: 46px;
   font-weight: 700;
+  text-transform: uppercase;
 }
-h1 .subheading {
+.subheading {
   font-size: 22px;
   font-weight: 400;
+  margin-bottom: 24px;
 }
 h2 {
   font-size: 36px;
@@ -823,6 +827,9 @@ li {
 .btn {
   font-size: 16px;
   font-weight: 500;
+  padding: 15px 41px;
+  display: inline-block;
+  text-transform: uppercase;
   color: #fff;
   background: #212121;
 }
@@ -874,10 +881,34 @@ a:focus {
 .show {
   display: block !important;
 }
+header .rectangle-left {
+  border: 17.25px solid #212121;
+  border-left: 0;
+  width: 416.5px;
+  height: 456.5px;
+  position: absolute;
+  z-index: 99;
+  top: 201px;
+  opacity: 0.102;
+}
+header .rectangle-right {
+  border: 13px solid #ffffff;
+  border-right: 0;
+  position: absolute;
+  right: 0;
+  top: 248px;
+  width: 263px;
+  height: 352px;
+  z-index: 99;
+}
 header nav.navbar {
+  position: fixed;
   margin: 0 auto;
   padding: 48px 0;
+  left: 0;
+  right: 0;
   width: 970px;
+  z-index: 100;
 }
 @media screen and (min-width: 1200px) {
   header nav.navbar {
@@ -920,6 +951,7 @@ header nav.navbar ul li {
 header nav.navbar ul li a {
   text-decoration: none;
   color: #212121;
+  padding-bottom: 5px;
 }
 header nav.navbar ul li a:hover {
   border-bottom: 2px solid #212121;
@@ -929,4 +961,21 @@ header nav.navbar ul li:first-child {
 }
 header nav.navbar ul li:last-child {
   padding-right: 0;
+}
+header .hero {
+  position: relative;
+  background: #ffffff;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #ffffff), color-stop(52%, #f6f6f6), color-stop(52%, #e1e1e1), color-stop(100%, #e1e1e1));
+  background: -webkit-linear-gradient(left, #ffffff 0%, #f6f6f6 52%, #e1e1e1 52%, #e1e1e1 100%);
+  background: linear-gradient(to right, #ffffff 0%, #f6f6f6 52%, #e1e1e1 52%, #e1e1e1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e1e1e1', GradientType=1);
+}
+header .hero .hero-text {
+  margin: 205px 0;
+}
+header .hero .hero-text .btn-first {
+  margin-right: 8px;
+}
+header .hero .hero-text .btn-invert {
+  margin-left: 8px;
 }

@@ -1,8 +1,32 @@
 header {
+  .rectangle-left {
+    border: 17.25px solid rgb(33, 33, 33);
+    border-left: 0;
+    width: 416.5px;
+    height: 456.5px;
+    position: absolute;
+    z-index: 99;
+    top: 201px;
+    opacity: 0.102;
+  }
+  .rectangle-right {
+    border: 13px solid rgb(255, 255, 255);
+    border-right: 0;
+    position: absolute;
+    right: 0;
+    top: 248px;
+    width: 263px;
+    height: 352px;
+    z-index: 99;
+  }
   nav.navbar {
+    position: fixed;
     margin: 0 auto;
     padding: 48px 0;
+    left: 0;
+    right: 0;
     width: 970px;
+    z-index: 100;
     @media screen and (min-width: @screen-lg) {
       width: 1170px;
     }
@@ -39,6 +63,7 @@ header {
         a {
           text-decoration: none;
           color: @black;
+          padding-bottom: 5px;
 
           &:hover {
             border-bottom: 2px solid @black;
@@ -50,6 +75,27 @@ header {
       }
       li:last-child {
         padding-right: 0;
+      }
+    }
+  }
+  .hero {
+    position: relative;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(52%, rgba(246,246,246,1)), color-stop(52%, rgba(225,225,225,1)), color-stop(100%, rgba(225,225,225,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e1e1', GradientType=1 );
+    .hero-text {
+      margin: 205px 0;
+
+      .btn-first {
+        margin-right: 8px;
+      }
+      .btn-invert {
+        margin-left: 8px;
       }
     }
   }
