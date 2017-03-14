@@ -828,6 +828,7 @@ h3 {
 h4 {
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 9px;
 }
 p {
   font-size: 16px;
@@ -999,6 +1000,15 @@ header .hero .hero-text .btn-invert {
 }
 .home #about {
   text-align: center;
+}
+.home #skills {
+  padding: 61px 0 7px;
+}
+.home #skills h4 {
+  text-transform: uppercase;
+}
+.home #skills .progress-bar {
+  margin-bottom: 44px;
 }
 .home #skills .progress-bar .outer-bar {
   background: #dfdfdf;
