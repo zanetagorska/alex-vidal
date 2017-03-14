@@ -1000,3 +1000,13 @@ header .hero .hero-text .btn-invert {
 .home #about {
   text-align: center;
 }
+.home #skills .progress-bar .outer-bar {
+  background: #dfdfdf;
+  height: 15px;
+  width: 100%;
+}
+.home #skills .progress-bar .inner-bar {
+  background: #212121;
+  height: 15px;
+  width: 0;
+}

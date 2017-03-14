@@ -11,4 +11,9 @@ $( function() {
       $('.navbar ul').css('display', 'block');
     };
   });
+
+  $('.inner-bar').each(function(){
+    $(this).css('width', $(this).attr('data-value') +'%');
+  })
+
 });
