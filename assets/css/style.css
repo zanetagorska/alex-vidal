@@ -1020,3 +1020,33 @@ header .hero .hero-text .btn-invert {
   height: 15px;
   width: 0;
 }
+.home #services {
+  text-align: center;
+  position: relative;
+}
+.home #services .bg-img {
+  background: url("../img/services/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+}
+.home #services .services-info {
+  position: absolute;
+  top: 279px;
+  background: #fff;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 40.18px 8.82px rgba(0, 0, 0, 0.15);
+  padding: 111px 15px;
+}
+.home #services .services-info .service-icon {
+  display: block;
+  margin: 0 auto 14px;
+}
+.home #services .services-info p {
+  max-width: 300px;
+  margin: 0 auto 26px;
+}
+.home #portfolio {
+  margin-top: 300px;
+}
