@@ -851,11 +851,19 @@ section {
   text-transform: uppercase;
   color: #fff;
   background: #212121;
+  text-decoration: none;
+}
+.btn:hover,
+.btn:focus {
+  color: #fff;
 }
 .btn.btn-invert {
   color: #212121;
   background: #fff;
   border: solid 1px #212121;
+}
+.btn:hover {
+  text-decoration: none;
 }
 .number {
   font-size: 100px;
@@ -1049,4 +1057,49 @@ header .hero .hero-text .btn-invert {
 }
 .home #portfolio {
   margin-top: 300px;
+  text-align: center;
+}
+.home #portfolio .portfolio-item {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 28px;
+  text-align: left;
+}
+.home #portfolio .overlay {
+  background: #000;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.home #portfolio .overlay .rectangle {
+  border: 8px solid #e1e1e1;
+  border-left: 0;
+  width: 42%;
+  height: 70%;
+  position: relative;
+  top: 15%;
+}
+.home #portfolio .overlay .text-box {
+  position: relative;
+  margin-left: 20%;
+  margin-top: -16%;
+}
+.home #portfolio .overlay .text-box h3 {
+  margin-bottom: 12px;
+}
+.home #portfolio .overlay .text-box .fa {
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 2px;
+}
+.home #portfolio .overlay .text-box .fa.fa-eye {
+  margin-left: 0;
+}
+.home #portfolio .overlay .text-box .fa:hover {
+  color: #212121;
+  background: #fff;
 }

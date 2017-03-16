@@ -63,6 +63,13 @@ li {
   font-size: 16px;
   font-weight: 400;
 }
+.transition(@property: all; @time: 300ms; @function: ease-in) {
+    -webkit-transition: @property @time @function;
+    -moz-transition: @property @time @function;
+    -ms-transition: @property @time @function;
+    -o-transition: @property @time @function;
+    transition: @property @time @function;
+}
 section {
   padding: 61px 0 51px;
 }
@@ -75,10 +82,17 @@ section {
   text-transform: uppercase;
   color: #fff;
   background: @black;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: #fff;
+  }
   &.btn-invert {
     color: @black;
     background: #fff;
     border: solid 1px @black;
+  }
+  &:hover {
+    text-decoration: none;
   }
 }
 .number {

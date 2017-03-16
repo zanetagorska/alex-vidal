@@ -16,4 +16,16 @@ $( function() {
     $(this).css('width', $(this).attr('data-value') +'%');
   })
 
+// match height 
+$(".portfolio-item").matchHeight();
+
+// portfolio hover
+  $('.portfolio-item').hover(
+    function(){
+      $(this).find('.overlay').animate({'opacity': '0.7'}, 300);
+    },
+    function(){
+      $(this).find('.overlay').animate({'opacity': '0'}, 300);
+    });
+
 });
