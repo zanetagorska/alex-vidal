@@ -19,6 +19,22 @@ $( function() {
 // match height 
 $(".portfolio-item").matchHeight();
 
+  $('#fun-facts').one('inview', function(event, isInView) {
+    if (isInView) {
+      $('.counter-number').each(function () {
+        $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 3000,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });
+      });
+    }
+  });
+
 // portfolio hover
   $('.portfolio-item').hover(
     function(){
@@ -26,6 +42,8 @@ $(".portfolio-item").matchHeight();
     },
     function(){
       $(this).find('.overlay').animate({'opacity': '0'}, 300);
-    });
+  });
+
+
 
 });

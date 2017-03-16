@@ -865,14 +865,6 @@ section {
 .btn:hover {
   text-decoration: none;
 }
-.number {
-  font-size: 100px;
-  font-weight: 300;
-}
-.number-description {
-  font-size: 30px;
-  font-weight: 400;
-}
 a {
   color: #337ab7;
   text-decoration: none;
@@ -1102,4 +1094,20 @@ header .hero .hero-text .btn-invert {
 .home #portfolio .overlay .text-box .fa:hover {
   color: #212121;
   background: #fff;
+}
+.home #fun-facts {
+  background: url("../img/fun-facts/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 44px 0;
+  color: #fff;
+  text-align: center;
+}
+.home #fun-facts .counter-number {
+  font-size: 100px;
+  font-weight: 300;
+}
+.home #fun-facts .number-description {
+  font-size: 30px;
+  font-weight: 400;
 }
