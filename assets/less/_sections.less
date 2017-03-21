@@ -237,6 +237,41 @@ header {
   }
 
   #contact {
+    text-align: center;
+
+    h2{
+      margin-bottom: 46px;
+    }
+
+    input:focus, textarea:focus {
+    outline: 0;
+    }
+    input:not([type="submit"]) {
+      border: 0;
+      border-bottom: solid 1px @black;
+      width: 48.83%;
+      margin: 1% 1% 4%;
+      line-height: 26px;
+      &.left {
+        margin-left: 0;
+      }
+      &.right {
+        margin-right: 0;
+      }
+    }
+    textarea {
+      width: 100%;
+      border: 0;
+      border-bottom: solid 1px @black;
+      height: 189px;
+      margin-bottom: 36px;
+    }
+    input[type="submit"] {
+      background: url("../img/send-icon.png") no-repeat;
+      background-position-y: center;
+      background-position-x: 76%;
+      padding-right: 57px;
+    }
   }
 }
 

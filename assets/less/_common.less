@@ -63,6 +63,13 @@ li {
   font-size: 16px;
   font-weight: 400;
 }
+
+input, textarea {
+  font-size: 16px;
+  font-family: 'Cormorant', serif;
+  color: @black;
+}
+
 .transition(@property: all; @time: 300ms; @function: ease-in) {
     -webkit-transition: @property @time @function;
     -moz-transition: @property @time @function;
@@ -83,6 +90,7 @@ section {
   color: #fff;
   background: @black;
   text-decoration: none;
+  cursor: pointer;
   .transition();
   &:hover, &:focus {
     color: #fff;

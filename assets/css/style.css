@@ -840,6 +840,12 @@ li {
   font-size: 16px;
   font-weight: 400;
 }
+input,
+textarea {
+  font-size: 16px;
+  font-family: 'Cormorant', serif;
+  color: #212121;
+}
 section {
   padding: 61px 0 51px;
 }
@@ -852,6 +858,7 @@ section {
   color: #fff;
   background: #212121;
   text-decoration: none;
+  cursor: pointer;
   -webkit-transition: all 300ms ease-in;
   transition: all 300ms ease-in;
 }
@@ -1124,6 +1131,42 @@ header .hero .hero-text .btn-invert {
 .home #fun-facts .number-description {
   font-size: 30px;
   font-weight: 400;
+}
+.home #contact {
+  text-align: center;
+}
+.home #contact h2 {
+  margin-bottom: 46px;
+}
+.home #contact input:focus,
+.home #contact textarea:focus {
+  outline: 0;
+}
+.home #contact input:not([type="submit"]) {
+  border: 0;
+  border-bottom: solid 1px #212121;
+  width: 48.83%;
+  margin: 1% 1% 4%;
+  line-height: 26px;
+}
+.home #contact input:not([type="submit"]).left {
+  margin-left: 0;
+}
+.home #contact input:not([type="submit"]).right {
+  margin-right: 0;
+}
+.home #contact textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: solid 1px #212121;
+  height: 189px;
+  margin-bottom: 36px;
+}
+.home #contact input[type="submit"] {
+  background: url("../img/send-icon.png") no-repeat;
+  background-position-y: center;
+  background-position-x: 76%;
+  padding-right: 57px;
 }
 footer {
   background: #212121;
