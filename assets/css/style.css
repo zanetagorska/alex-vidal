@@ -852,6 +852,8 @@ section {
   color: #fff;
   background: #212121;
   text-decoration: none;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 .btn:hover,
 .btn:focus {
@@ -866,12 +868,14 @@ section {
   text-decoration: none;
 }
 a {
-  color: #337ab7;
+  color: #e1e1e1;
   text-decoration: none;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #fbfbfb;
   text-decoration: underline;
 }
 a:focus {
@@ -1058,13 +1062,22 @@ header .hero .hero-text .btn-invert {
   text-align: left;
 }
 .home #portfolio .overlay {
-  background: #000;
   opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   color: #fff;
+}
+.home #portfolio .overlay::before {
+  content: "";
+  background: #000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
 }
 .home #portfolio .overlay .rectangle {
   border: 8px solid #e1e1e1;
@@ -1073,6 +1086,7 @@ header .hero .hero-text .btn-invert {
   height: 70%;
   position: relative;
   top: 15%;
+  opacity: 0.7;
 }
 .home #portfolio .overlay .text-box {
   position: relative;
@@ -1110,4 +1124,24 @@ header .hero .hero-text .btn-invert {
 .home #fun-facts .number-description {
   font-size: 30px;
   font-weight: 400;
+}
+footer {
+  background: #212121;
+  color: #fff;
+}
+footer .fa {
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 2px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+footer .fa.fa-eye {
+  margin-left: 0;
+}
+footer .fa:hover {
+  color: #212121;
+  background: #fff;
 }

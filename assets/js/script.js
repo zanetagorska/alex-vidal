@@ -38,7 +38,7 @@ $(".portfolio-item").matchHeight();
 // portfolio hover
   $('.portfolio-item').hover(
     function(){
-      $(this).find('.overlay').animate({'opacity': '0.7'}, 300);
+      $(this).find('.overlay').animate({'opacity': '1'}, 300);
     },
     function(){
       $(this).find('.overlay').animate({'opacity': '0'}, 300);
