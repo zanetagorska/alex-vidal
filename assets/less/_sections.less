@@ -22,13 +22,24 @@ header {
   nav.navbar {
     position: fixed;
     margin: 0 auto;
-    padding: 48px 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: ~"calc((100% - 970px)/2)";
+    padding-right: ~"calc((100% - 970px)/2)";
     left: 0;
     right: 0;
-    width: 970px;
     z-index: 100;
+    .transition();
     @media screen and (min-width: @screen-lg) {
-      width: 1170px;
+      padding-left: ~"calc((100% - 1170px)/2)";
+      padding-right: ~"calc((100% - 1170px)/2)";
+    }
+
+    &.smaller {
+      background: #fff;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px @grey solid;
     }
 
     .logo {
@@ -293,16 +304,5 @@ footer {
       color: @black;
       background: #fff;
     }
-  }
-}
-
-#test {
-  text-align: center;
-  .img-box {
-    width: 30%;
-    margin: 20px;
-    height: 200px;
-    background: blue;
-    display: inline-block;
   }
 }

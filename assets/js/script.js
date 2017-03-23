@@ -14,7 +14,24 @@ $( function() {
 
   $('.inner-bar').each(function(){
     $(this).css('width', $(this).attr('data-value') +'%');
-  })
+  });
+
+  // Menu tło na scroll
+    function init() {
+    window.addEventListener('scroll', function(e){
+      var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+      shrinkOn = 1,
+      navbar = document.querySelector('.navbar');
+      if (distanceY > shrinkOn) {
+        classie.add(navbar,'smaller');
+      } else {
+        if (classie.has(navbar,'smaller')) {
+          classie.remove(navbar,'smaller');
+        }
+      }
+    });
+  }
+  window.onload = init();
 
 //portfolio add overlay
 $(".portfolio-gallery").find(".portfolio-item > img").after('<div class="overlay"><div class="rectangle"></div><div class="text-box"><h3>Project Title</h3><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a></div></div>');

@@ -934,16 +934,27 @@ header .rectangle-right {
 header nav.navbar {
   position: fixed;
   margin: 0 auto;
-  padding: 48px 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: calc((100% - 970px)/2);
+  padding-right: calc((100% - 970px)/2);
   left: 0;
   right: 0;
-  width: 970px;
   z-index: 100;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 @media screen and (min-width: 1200px) {
   header nav.navbar {
-    width: 1170px;
+    padding-left: calc((100% - 1170px)/2);
+    padding-right: calc((100% - 1170px)/2);
   }
+}
+header nav.navbar.smaller {
+  background: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px #e1e1e1 solid;
 }
 header nav.navbar .logo {
   font-family: 'Montserrat', sans-serif;
@@ -1187,14 +1198,4 @@ footer .fa.fa-eye {
 footer .fa:hover {
   color: #212121;
   background: #fff;
-}
-#test {
-  text-align: center;
-}
-#test .img-box {
-  width: 30%;
-  margin: 20px;
-  height: 200px;
-  background: blue;
-  display: inline-block;
 }
