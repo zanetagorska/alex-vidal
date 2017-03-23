@@ -94,11 +94,15 @@ section {
   .transition();
   &:hover, &:focus {
     color: #fff;
+    background: lighten(@black, 20%);
   }
   &.btn-invert {
     color: @black;
     background: #fff;
     border: solid 1px @black;
+    &:hover, &:focus {
+      background: darken(#fff, 5%);
+    }
   }
   &:hover {
     text-decoration: none;
