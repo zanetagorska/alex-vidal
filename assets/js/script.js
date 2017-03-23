@@ -16,6 +16,9 @@ $( function() {
     $(this).css('width', $(this).attr('data-value') +'%');
   })
 
+//portfolio add overlay
+$(".portfolio-gallery").find(".portfolio-item > img").after('<div class="overlay"><div class="rectangle"></div><div class="text-box"><h3>Project Title</h3><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a><a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a></div></div>');
+
 // match height 
 $(".portfolio-item").matchHeight();
 
@@ -43,6 +46,7 @@ $(".portfolio-item").matchHeight();
     function(){
       $(this).find('.overlay').animate({'opacity': '0'}, 300);
   });
+
 
 
 

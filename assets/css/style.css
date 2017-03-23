@@ -1188,3 +1188,13 @@ footer .fa:hover {
   color: #212121;
   background: #fff;
 }
+#test {
+  text-align: center;
+}
+#test .img-box {
+  width: 30%;
+  margin: 20px;
+  height: 200px;
+  background: blue;
+  display: inline-block;
+}
