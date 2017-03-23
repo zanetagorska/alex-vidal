@@ -1,24 +1,4 @@
 header {
-  .rectangle-left {
-    border: 17.25px solid rgb(33, 33, 33);
-    border-left: 0;
-    width: 416.5px;
-    height: 456.5px;
-    position: absolute;
-    z-index: 98;
-    top: 201px;
-    opacity: 0.102;
-  }
-  .rectangle-right {
-    border: 13px solid rgb(255, 255, 255);
-    border-right: 0;
-    position: absolute;
-    right: 0;
-    top: 248px;
-    width: 263px;
-    height: 352px;
-    z-index: 98;
-  }
   nav.navbar {
     position: fixed;
     margin: 0 auto;
@@ -104,7 +84,29 @@ header {
 
     }
   }
+  .rectangle-left {
+    border: 17.25px solid rgb(33, 33, 33);
+    border-left: 0;
+    width: 304px;
+    height: 489px;
+    position: absolute;
+    z-index: 98;
+    top: 201px;
+    opacity: 0.102;
+  }
+  .rectangle-right {
+    border: 13px solid rgb(255, 255, 255);
+    border-right: 0;
+    position: absolute;
+    right: 0;
+    top: 248px;
+    width: 203px;
+    height: 377px;
+    z-index: 98;
+  }
   .hero {
+    padding-top: 43px;
+    max-height: 800px;
     position: relative;
     background: rgba(255,255,255,1);
     background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
@@ -115,7 +117,7 @@ header {
     background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e1e1', GradientType=1 );
     .hero-text {
-      margin: 205px 0;
+      margin: 260px 0 140px;
       z-index: 99;
 
       .btn-first {
@@ -124,6 +126,9 @@ header {
       .btn-invert {
         margin-left: 8px;
       }
+    }
+    .hero-img, img {
+      z-index: 99;
     }
   }
 }
