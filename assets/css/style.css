@@ -847,7 +847,7 @@ textarea {
   color: #212121;
 }
 section {
-  padding: 61px 0 51px;
+  padding: 50px 0;
 }
 .btn {
   font-size: 16px;
@@ -1052,9 +1052,7 @@ header .hero img {
 }
 .home #about {
   text-align: center;
-}
-.home #skills {
-  padding: 61px 0 7px;
+  padding: 114px 0 60px;
 }
 .home #skills h4 {
   text-transform: uppercase;
@@ -1073,6 +1071,7 @@ header .hero img {
   width: 0;
 }
 .home #services {
+  padding: 31px 0px 50px;
   text-align: center;
   position: relative;
 }
@@ -1084,12 +1083,12 @@ header .hero img {
 }
 .home #services .services-info {
   position: absolute;
-  top: 279px;
+  top: 248px;
   background: #fff;
   left: 0;
   right: 0;
   box-shadow: 0px 0px 40.18px 8.82px rgba(0, 0, 0, 0.15);
-  padding: 111px 15px;
+  padding: 111px 15px 90px;
 }
 .home #services .services-info .service-icon {
   display: block;
@@ -1100,7 +1099,8 @@ header .hero img {
   margin: 0 auto 26px;
 }
 .home #portfolio {
-  margin-top: 300px;
+  margin-top: 342px;
+  padding: 50px 0 90px;
   text-align: center;
 }
 .home #portfolio .portfolio-item {
@@ -1157,6 +1157,9 @@ header .hero img {
   color: #212121;
   background: #fff;
 }
+.home #portfolio .overlay .btn {
+  margin: 12px auto;
+}
 .home #fun-facts {
   background: url("../img/fun-facts/bg.jpg") no-repeat;
   background-size: cover;
@@ -1174,6 +1177,7 @@ header .hero img {
   font-weight: 400;
 }
 .home #contact {
+  padding: 110px 0 90px;
   text-align: center;
 }
 .home #contact h2 {
