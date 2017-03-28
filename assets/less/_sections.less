@@ -192,19 +192,30 @@ header {
     text-align: center;
     position: relative;
     .bg-img {
-      background: url("../img/services/bg.jpg") no-repeat;
-      background-size: cover;
-      background-position: center;
-      padding: 200px 0;
+      display: none;
+      @media screen and (min-width: @screen-sm) {
+        display: block;
+        background: url("../img/services/bg.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 200px 0;
+      }
     }
     .services-info {
-      position: absolute;
-      top: 248px;
-      background: #fff;
-      left: 0;
-      right: 0;
       box-shadow: 0px 0px 40.18px 8.82px rgba(0, 0, 0, 0.15);
-      padding: 111px 15px 90px;
+      padding: 45px 0;
+      @media screen and (min-width: @screen-sm) {
+        background: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 80px 15px 40px;
+        top: 150px;
+      }
+      @media screen and (min-width: @screen-md) {
+        top: 248px;
+        padding: 111px 15px 90px;
+      }
 
       .service-icon {
         display: block;
@@ -218,9 +229,14 @@ header {
   }
 
   #portfolio {
-    margin-top: 342px;
     padding: 50px 0 90px;
     text-align: center;
+    @media screen and (min-width: @screen-sm) {
+      margin-top: 190px;
+    }
+    @media screen and (min-width: @screen-md) {
+      margin-top: 342px;
+    }
     .portfolio-item {
       position: relative;
       cursor: pointer;
@@ -267,6 +283,7 @@ header {
           border-radius: 50%;
           border: 2px solid #fff;
           margin: 0 2px;
+          .transition();
           &.fa-eye {
             margin-left: 0;
           }

@@ -1126,19 +1126,36 @@ header .hero img {
   position: relative;
 }
 .home #services .bg-img {
-  background: url("../img/services/bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 200px 0;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .home #services .bg-img {
+    display: block;
+    background: url("../img/services/bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+  }
 }
 .home #services .services-info {
-  position: absolute;
-  top: 248px;
-  background: #fff;
-  left: 0;
-  right: 0;
   box-shadow: 0px 0px 40.18px 8.82px rgba(0, 0, 0, 0.15);
-  padding: 111px 15px 90px;
+  padding: 45px 0;
+}
+@media screen and (min-width: 768px) {
+  .home #services .services-info {
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 80px 15px 40px;
+    top: 150px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home #services .services-info {
+    top: 248px;
+    padding: 111px 15px 90px;
+  }
 }
 .home #services .services-info .service-icon {
   display: block;
@@ -1149,9 +1166,18 @@ header .hero img {
   margin: 0 auto 26px;
 }
 .home #portfolio {
-  margin-top: 342px;
   padding: 50px 0 90px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .home #portfolio {
+    margin-top: 190px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home #portfolio {
+    margin-top: 342px;
+  }
 }
 .home #portfolio .portfolio-item {
   position: relative;
@@ -1199,6 +1225,8 @@ header .hero img {
   border-radius: 50%;
   border: 2px solid #fff;
   margin: 0 2px;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 .home #portfolio .overlay .text-box .fa.fa-eye {
   margin-left: 0;
