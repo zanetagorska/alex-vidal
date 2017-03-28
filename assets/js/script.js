@@ -12,8 +12,17 @@ $( function() {
     };
   });
 
-  $('.inner-bar').each(function(){
-    $(this).css('width', $(this).attr('data-value') +'%');
+
+// Animated Progress Bar
+
+  $('#skills').one('inview', function(event, isInView) {
+    if (isInView) {
+      $('.inner-bar').each(function(){
+        $(this).animate({
+          width: $(this).attr('data-value') +'%'
+        },1000);
+      });
+    }
   });
 
   // Menu tło na scroll
@@ -33,8 +42,9 @@ $( function() {
   }
   window.onload = init();
 
-// match height 
-$(".portfolio-item").matchHeight();
+
+  // match height 
+  $(".portfolio-item").matchHeight();
 
   $('#fun-facts').one('inview', function(event, isInView) {
     if (isInView) {
@@ -52,7 +62,8 @@ $(".portfolio-item").matchHeight();
     }
   });
 
-// portfolio hover
+
+  // portfolio hover
   $('.portfolio-item').hover(
     function(){
       $(this).find('.overlay').animate({'opacity': '1'}, 300);
