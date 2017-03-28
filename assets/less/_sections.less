@@ -85,40 +85,61 @@ header {
     }
   }
   .rectangle-left {
-    border: 17.25px solid rgb(33, 33, 33);
-    border-left: 0;
-    width: 304px;
-    height: 489px;
-    position: absolute;
-    z-index: 98;
-    top: 201px;
-    opacity: 0.102;
+    display: none;
+    @media screen and(min-width: @screen-md) {
+      display: block;
+      border: 17.25px solid rgb(33, 33, 33);
+      border-left: 0;
+      width: 304px;
+      height: 489px;
+      position: absolute;
+      z-index: 98;
+      top: 201px;
+      opacity: 0.102;
+    }
   }
   .rectangle-right {
-    border: 13px solid rgb(255, 255, 255);
-    border-right: 0;
-    position: absolute;
-    right: 0;
-    top: 248px;
-    width: 203px;
-    height: 377px;
-    z-index: 98;
+    display: none;
+    @media screen and(min-width: @screen-md) {
+      display: block;
+      border: 13px solid rgb(255, 255, 255);
+      border-right: 0;
+      position: absolute;
+      right: 0;
+      top: 248px;
+      width: 203px;
+      height: 377px;
+      z-index: 98;
+    }
   }
   .hero {
-    padding-top: 43px;
-    max-height: 800px;
-    position: relative;
-    background: rgba(255,255,255,1);
-    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(52%, rgba(246,246,246,1)), color-stop(52%, rgba(225,225,225,1)), color-stop(100%, rgba(225,225,225,1)));
-    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
-    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
-    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
-    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e1e1', GradientType=1 );
+    padding-top: 89px;
+    text-align: center;
+    background: url("../img/hero/hero.png");
+    @media screen and (min-width: @screen-sm) {
+      max-height: 577px;
+      text-align: left;
+      position: relative;
+      background: rgba(255,255,255,1);
+      background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(52%, rgba(246,246,246,1)), color-stop(52%, rgba(225,225,225,1)), color-stop(100%, rgba(225,225,225,1)));
+      background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+      background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+      background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+      background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 52%, rgba(225,225,225,1) 52%, rgba(225,225,225,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e1e1', GradientType=1 );
+    }
+    @media screen and (min-width: @screen-md) {
+      padding-top: 43px;
+      max-height: 800px;
+    }
+
     .hero-text {
-      margin: 260px 0 140px;
+      margin: 140px 0 ;
       z-index: 99;
+      @media screen and (min-width: @screen-md) {
+        margin: 260px 0 140px;
+      }
 
       .btn-first {
         margin-right: 8px;
@@ -128,7 +149,11 @@ header {
       }
     }
     .hero-img, img {
-      z-index: 99;
+      display: none;
+      @media screen and(min-width: @screen-sm) {
+        display: block;
+        z-index: 99;
+      }
     }
   }
 }
@@ -136,7 +161,10 @@ header {
 .home {
   #about {
     text-align: center;
-    padding: 114px 0 60px;
+    padding: 80px 0 50px;
+    @media screen and (min-width: @screen-md) {
+      padding: 114px 0 60px;
+    }
   }
 
   #skills {
@@ -333,7 +361,3 @@ footer {
     }
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 7886522... Portfolio - testy, ikony dodane w js

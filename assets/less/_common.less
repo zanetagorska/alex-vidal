@@ -82,9 +82,13 @@ section {
 }
 
 .btn {
-  font-size: 16px;
+  font-size: 14px;
+  padding: 10px 20px;
+  @media screen and (min-width: @screen-md) {
+    font-size: 16px; 
+    padding: 15px 41px;
+  }
   font-weight: 500;
-  padding: 15px 41px;
   display: inline-block;
   text-transform: uppercase;
   color: #fff;
@@ -92,7 +96,7 @@ section {
   text-decoration: none;
   cursor: pointer;
   .transition();
-  &:hover, &:focus {
+  &:hover, &:focus, &:visited {
     color: #fff;
     background: lighten(@black, 20%);
   }
@@ -108,11 +112,12 @@ section {
     text-decoration: none;
   }
 }
+
 a {
   color: @grey;
   text-decoration: none;
   .transition();
-  &:hover, &:focus {
+  &:hover, &:focus, &:visited {
     color: lighten(@grey, 10%);
     text-decoration: underline;
   }
