@@ -1268,15 +1268,17 @@ header .hero img {
 .home #contact input:not([type="submit"]) {
   border: 0;
   border-bottom: solid 1px #212121;
-  width: 48.83%;
+  width: 48%;
   margin: 1% 1% 4%;
   line-height: 26px;
 }
 .home #contact input:not([type="submit"]).left {
   margin-left: 0;
+  float: left;
 }
 .home #contact input:not([type="submit"]).right {
   margin-right: 0;
+  float: right;
 }
 .home #contact textarea {
   width: 100%;
@@ -1290,6 +1292,28 @@ header .hero img {
   background-position-y: center;
   background-position-x: 76%;
   padding-right: 57px;
+}
+.home #contact ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #212121;
+  font-family: 'Cormorant', serif;
+}
+.home #contact :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #212121;
+  opacity: 1;
+  font-family: 'Cormorant', serif;
+}
+.home #contact ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #212121;
+  opacity: 1;
+  font-family: 'Cormorant', serif;
+}
+.home #contact :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #212121;
+  font-family: 'Cormorant', serif;
 }
 footer {
   background: #212121;

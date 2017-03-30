@@ -332,14 +332,16 @@ header {
     input:not([type="submit"]) {
       border: 0;
       border-bottom: solid 1px @black;
-      width: 48.83%;
+      width: 48%;
       margin: 1% 1% 4%;
       line-height: 26px;
       &.left {
         margin-left: 0;
+        float: left;
       }
       &.right {
         margin-right: 0;
+        float: right;
       }
     }
     textarea {
@@ -354,6 +356,24 @@ header {
       background-position-y: center;
       background-position-x: 76%;
       padding-right: 57px;
+    }
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: @black;
+    font-family: 'Cormorant', serif;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color: @black;
+       opacity:  1;
+       font-family: 'Cormorant', serif;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: @black;
+       opacity:  1;
+       font-family: 'Cormorant', serif;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: @black;
+       font-family: 'Cormorant', serif;
     }
   }
 }
