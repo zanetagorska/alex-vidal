@@ -72,6 +72,11 @@ $( function() {
       $(this).find('.overlay').animate({'opacity': '0'}, 300);
   });
 
-
+  // scroll btn
+  $('.scroll-top-btn').click(function (e) {
+    $('html,body').animate({
+        scrollTop: 0,
+    }, 1000);
+  });
 
 });

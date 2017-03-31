@@ -203,7 +203,7 @@ header {
     }
     .services-info {
       box-shadow: 0px 0px 40.18px 8.82px rgba(0, 0, 0, 0.15);
-      padding: 45px 0;
+      padding: 45px 15px;
       @media screen and (min-width: @screen-sm) {
         background: #fff;
         position: absolute;
@@ -381,20 +381,55 @@ header {
 footer {
   background: @black;
   color: #fff;
-  .fa {
-    padding: 5px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    margin: 0 2px;
-    width: 30px;
-    height: 30px;
+  padding: 36px 15px;
+
+  .icon-box {
     text-align: center;
-    &.fa-eye {
-      margin-left: 0;
+    @media screen and (min-width: @screen-sm) {
+      text-align: left;
     }
-    &:hover {
-      color: @black;
-      background: #fff;
+    .fa {
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin: 0 3px;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      .transition();
+      &:hover {
+        color: @black;
+        background: #fff;
+        }
+      &.fa-long-arrow-up {
+        background: #fff;
+        color: @black;
+        border: 0;
+      }
     }
+  }
+
+  .copy-rights {
+    text-align: center;
+    @media screen and (min-width: @screen-sm) {
+      text-align: right;
+    }
+    @media screen and (min-width: @screen-md) {
+      text-align: center;
+    }
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  .scroll-top-btn {
+    display: none;
+    @media screen and (min-width: @screen-sm) {
+      position: absolute;
+      right: 0;
+      margin-right: 15px;
+    }
+
   }
 }
