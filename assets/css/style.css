@@ -1331,7 +1331,7 @@ footer .icon-box {
     text-align: left;
   }
 }
-footer .icon-box .fa {
+footer .fa {
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
@@ -1343,11 +1343,11 @@ footer .icon-box .fa {
   -webkit-transition: all 300ms ease-in;
   transition: all 300ms ease-in;
 }
-footer .icon-box .fa:hover {
+footer .fa:hover {
   color: #212121;
   background: #fff;
 }
-footer .icon-box .fa.fa-long-arrow-up {
+footer .fa.fa-long-arrow-up {
   background: #fff;
   color: #212121;
   border: 0;
@@ -1371,8 +1371,9 @@ footer .copy-rights p {
 footer .scroll-top-btn {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   footer .scroll-top-btn {
+    display: block;
     position: absolute;
     right: 0;
     margin-right: 15px;

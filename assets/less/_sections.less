@@ -388,25 +388,26 @@ footer {
     @media screen and (min-width: @screen-sm) {
       text-align: left;
     }
-    .fa {
-      cursor: pointer;
-      padding: 8px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      margin: 0 3px;
-      width: 36px;
-      height: 36px;
-      text-align: center;
-      .transition();
-      &:hover {
-        color: @black;
-        background: #fff;
-        }
-      &.fa-long-arrow-up {
-        background: #fff;
-        color: @black;
-        border: 0;
+  }
+
+  .fa {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 0 3px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    .transition();
+    &:hover {
+      color: @black;
+      background: #fff;
       }
+    &.fa-long-arrow-up {
+      background: #fff;
+      color: @black;
+      border: 0;
     }
   }
 
@@ -425,7 +426,8 @@ footer {
 
   .scroll-top-btn {
     display: none;
-    @media screen and (min-width: @screen-sm) {
+    @media screen and (min-width: @screen-md) {
+      display: block;
       position: absolute;
       right: 0;
       margin-right: 15px;
