@@ -14,7 +14,7 @@ $( function() {
   });
 
 
-// Animated Progress Bar
+ // Animated Progress Bar
 
   $('#skills').one('inview', function(event, isInView) {
     if (isInView) {
@@ -43,10 +43,6 @@ $( function() {
   }
   window.onload = init();
 
-
-  // match height 
-  $(".portfolio-item").matchHeight();
-
   $('#fun-facts').one('inview', function(event, isInView) {
     if (isInView) {
       $('.counter-number').each(function () {
@@ -63,7 +59,6 @@ $( function() {
     }
   });
 
-
   // portfolio hover
   $('.portfolio-item').hover(
     function(){
@@ -74,10 +69,57 @@ $( function() {
   });
 
   // scroll btn
-  $('.scroll-top-btn').click(function (e) {
+  $('.scroll-top-btn').click(function(e) {
     $('html,body').animate({
         scrollTop: 0,
     }, 1000);
   });
 
+  // portfolio btn
+  $("#load-more-btn").click(function(e) {
+    e.preventDefault();
+  })
 });
+
+// Ajax gallery
+var portfolioGallery = document.getElementById("portfolio-gallery");
+var loadMoreBtn = document.getElementById("load-more-btn");
+var photoNr =  1;
+
+loadMoreBtn.addEventListener("click", function() {
+  var ourRequest = new XMLHttpRequest();
+  ourRequest.open('GET', 'https://zanetagorska.github.io/photo.json');
+  ourRequest.onload = function() {
+    if (ourRequest.status >= 200 && ourRequest.status < 400) {
+      var ourData = JSON.parse(ourRequest.responseText);
+      renderHTML(ourData);
+      if(photoNr < 6) {
+         photoNr += 3;
+       } else {
+          loadMoreBtn.style.display='none';
+       }
+    } else {
+      console.log("We connected to the server, but it returned an error.");
+    }
+  };
+
+  ourRequest.onerror = function() {
+    console.log("Connection error");
+  };
+  ourRequest.send();
+});
+
+function renderHTML(data) {
+  for (i = photoNr; i < photoNr + 3; i++) {
+    var colSm4 = document.createElement("div");
+    var portfolioItem = document.createElement("div");
+    var galleryImg = document.createElement("img");
+    galleryImg.src = 'https://zanetagorska.github.io/catsPhotos/cat' + i + '.jpg';
+    galleryImg.className= "img-responsive";
+    portfolioItem.className = "portfolio-item";
+    colSm4.className = "col-sm-4";
+    portfolioItem.appendChild(galleryImg);
+    colSm4.appendChild(portfolioItem);
+    portfolioGallery.appendChild(colSm4);
+  }
+}

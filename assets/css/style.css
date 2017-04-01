@@ -1184,6 +1184,7 @@ header .hero img {
 }
 .home #portfolio .portfolio-item {
   position: relative;
+  height: 273px;
   cursor: pointer;
   margin-bottom: 28px;
   text-align: left;
