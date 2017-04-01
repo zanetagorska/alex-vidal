@@ -114,7 +114,7 @@ function renderHTML(data) {
     var colSm4 = document.createElement("div");
     var portfolioItem = document.createElement("div");
     var galleryImg = document.createElement("img");
-    galleryImg.src = 'https://zanetagorska.github.io/catsPhotos/cat' + i + '.jpg';
+    galleryImg.src = 'https://zanetagorska.github.io/cats/cat' + i + '.jpg';
     galleryImg.className= "img-responsive";
     portfolioItem.className = "portfolio-item";
     colSm4.className = "col-sm-4";
