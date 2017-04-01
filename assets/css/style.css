@@ -869,10 +869,10 @@ section {
   }
 }
 .btn:hover,
-.btn:focus,
-.btn:visited {
+.btn:focus {
   color: #fff;
   background: #545454;
+  text-decoration: none;
 }
 .btn.btn-invert {
   color: #212121;

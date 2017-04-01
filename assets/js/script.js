@@ -21,7 +21,7 @@ $( function() {
       $('.inner-bar').each(function(){
         $(this).animate({
           width: $(this).attr('data-value') +'%'
-        },1000);
+        },2000);
       });
     }
   });
