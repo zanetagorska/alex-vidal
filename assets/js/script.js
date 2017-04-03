@@ -60,13 +60,15 @@ $( function() {
   });
 
   // portfolio hover
-  $('.portfolio-item').hover(
-    function(){
-      $(this).find('.overlay').animate({'opacity': '1'}, 300);
-    },
-    function(){
-      $(this).find('.overlay').animate({'opacity': '0'}, 300);
-  });
+  // function showOverlay(){
+  //   $('.portfolio-item').hover(
+  //     function(){
+  //       $(this).find('.overlay').animate({'opacity': '1'}, 300);
+  //     },
+  //     function(){
+  //       $(this).find('.overlay').animate({'opacity': '0'}, 300);
+  //   });
+  // }
 
   // scroll btn
   $('.scroll-top-btn').click(function(e) {
@@ -86,14 +88,14 @@ var portfolioGallery = document.getElementById("portfolio-gallery");
 var loadMoreBtn = document.getElementById("load-more-btn");
 var photoNr =  1;
 
-loadMoreBtn.addEventListener("click", function() {
+function addItems() {
   var ourRequest = new XMLHttpRequest();
   ourRequest.open('GET', 'https://zanetagorska.github.io/photo.json');
   ourRequest.onload = function() {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
       var ourData = JSON.parse(ourRequest.responseText);
       renderHTML(ourData);
-      if(photoNr < 6) {
+      if(photoNr < 12) {
          photoNr += 3;
        } else {
           loadMoreBtn.style.display='none';
@@ -107,19 +109,61 @@ loadMoreBtn.addEventListener("click", function() {
     console.log("Connection error");
   };
   ourRequest.send();
-});
+}
+
+addItems();
+addItems();
+loadMoreBtn.addEventListener("click", addItems );
+
+function showOverlay(){
+  var oldImg = document.querySelectorAll(".portfolio-item");
+  for (i=0; i < oldImg.length; i++) {
+    oldImg[i].addEventListener("mouseover", function(){
+      this.querySelector(".overlay").style.opacity = "1";
+    });
+    oldImg[i].addEventListener("mouseout", function(){
+      this.querySelector(".overlay").style.opacity = "0";
+    });
+  }
+}
 
 function renderHTML(data) {
   for (i = photoNr; i < photoNr + 3; i++) {
     var colSm4 = document.createElement("div");
     var portfolioItem = document.createElement("div");
     var galleryImg = document.createElement("img");
-    galleryImg.src = 'https://zanetagorska.github.io/cats/cat' + i + '.jpg';
+    var overlay = document.createElement("div");
+    var rectangle = document.createElement("div");
+    var textBox = document.createElement("div");
+    var projectTitle = document.createElement("h3");
+    var iconLink = document.createElement("a");
+
+    iconLink.href = "#";
+    projectTitle.textContent = data[i-1].projectTitle;
+    textBox.className = "text-box";
+    rectangle.className = "rectangle";
+    overlay.className = "overlay";
+    galleryImg.src = 'https://zanetagorska.github.io/z31gallery/' + i + '.jpg';
     galleryImg.className= "img-responsive";
     portfolioItem.className = "portfolio-item";
-    colSm4.className = "col-sm-4";
-    portfolioItem.appendChild(galleryImg);
-    colSm4.appendChild(portfolioItem);
+    colSm4.className = "col-xs-6 col-sm-4";
+
     portfolioGallery.appendChild(colSm4);
+    colSm4.appendChild(portfolioItem);
+    portfolioItem.appendChild(galleryImg);
+    galleryImg.after(overlay);
+    overlay.appendChild(rectangle);
+    overlay.appendChild(textBox);
+    textBox.appendChild(projectTitle);
+    textBox.appendChild(iconLink);    
+
+    for(j = 0; j<3; j++) {
+      var iconClasses = ["fa-eye", "fa-link", "fa-share-alt"];
+      var iconImg = document.createElement("i");
+      iconImg.className = "fa " + iconClasses[j];
+      iconLink.appendChild(iconImg);
+    }
+    
   }
+  showOverlay();
 }
