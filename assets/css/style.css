@@ -1052,11 +1052,11 @@ header .rectangle-right {
 header .hero {
   padding-top: 89px;
   text-align: center;
-  background: url("../img/hero/hero.png");
+  background: url("../img/hero/hero.png") no-repeat;
+  background-position: center 64px;
 }
 @media screen and (min-width: 768px) {
   header .hero {
-    max-height: 577px;
     text-align: left;
     position: relative;
     background: #ffffff;
@@ -1069,7 +1069,6 @@ header .hero {
 @media screen and (min-width: 992px) {
   header .hero {
     padding-top: 43px;
-    max-height: 800px;
   }
 }
 header .hero .hero-text {
@@ -1187,7 +1186,7 @@ header .hero img {
   cursor: pointer;
   margin-bottom: 28px;
   text-align: left;
-  height: 133px;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .home #portfolio .portfolio-item {
@@ -1362,7 +1361,7 @@ header .hero img {
 footer {
   background: #212121;
   color: #fff;
-  padding: 36px 15px;
+  padding: 36px 0;
 }
 footer .icon-box {
   text-align: center;

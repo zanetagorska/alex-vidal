@@ -115,9 +115,9 @@ header {
   .hero {
     padding-top: 89px;
     text-align: center;
-    background: url("../img/hero/hero.png");
+    background: url("../img/hero/hero.png") no-repeat;
+    background-position: center 64px;
     @media screen and (min-width: @screen-sm) {
-      max-height: 577px;
       text-align: left;
       position: relative;
       background: rgba(255,255,255,1);
@@ -131,7 +131,6 @@ header {
     }
     @media screen and (min-width: @screen-md) {
       padding-top: 43px;
-      max-height: 800px;
     }
 
     .hero-text {
@@ -242,7 +241,7 @@ header {
       cursor: pointer;
       margin-bottom: 28px;
       text-align: left;
-      height: 133px;
+      height: 100%;
       @media screen and (min-width: @screen-sm) {
         height: 167px;
       }
@@ -407,7 +406,7 @@ header {
 footer {
   background: @black;
   color: #fff;
-  padding: 36px 15px;
+  padding: 36px 0;
 
   .icon-box {
     text-align: center;
