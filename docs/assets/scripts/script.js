@@ -79,7 +79,7 @@ var photoNr =  1;
 
 function addItems() {
   var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'https://github.com/zanetagorska/alex-vidal/docs/photo.json');
+  ourRequest.open('GET', 'https://github.com/zanetagorska/alex-vidal/blob/master/docs/photo.json');
   ourRequest.onload = function() {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
       var ourData = JSON.parse(ourRequest.responseText);
