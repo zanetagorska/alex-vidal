@@ -59,17 +59,6 @@ $( function() {
     }
   });
 
-  // portfolio hover
-  // function showOverlay(){
-  //   $('.portfolio-item').hover(
-  //     function(){
-  //       $(this).find('.overlay').animate({'opacity': '1'}, 300);
-  //     },
-  //     function(){
-  //       $(this).find('.overlay').animate({'opacity': '0'}, 300);
-  //   });
-  // }
-
   // scroll btn
   $('.scroll-top-btn').click(function(e) {
     $('html,body').animate({
@@ -90,7 +79,7 @@ var photoNr =  1;
 
 function addItems() {
   var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'https://zanetagorska.github.io/photo.json');
+  ourRequest.open('GET', 'https://github.com/zanetagorska/alex-vidal/docs/photo.json');
   ourRequest.onload = function() {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
       var ourData = JSON.parse(ourRequest.responseText);
@@ -143,7 +132,7 @@ function renderHTML(data) {
     textBox.className = "text-box";
     rectangle.className = "rectangle";
     overlay.className = "overlay";
-    galleryImg.src = 'https://zanetagorska.github.io/z31gallery/' + i + '.jpg';
+    galleryImg.src = 'https://github.com/zanetagorska/alex-vidal/docs/assets/img/portfolio/' + i + '.jpg';
     galleryImg.className= "img-responsive";
     portfolioItem.className = "portfolio-item";
     colSm4.className = "col-xs-6 col-sm-4";
