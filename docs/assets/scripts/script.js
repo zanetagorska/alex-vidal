@@ -79,7 +79,7 @@ var photoNr =  1;
 
 function addItems() {
   var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'https://github.com/zanetagorska/alex-vidal/blob/master/docs/photo.json');
+  ourRequest.open('GET', 'https://zanetagorska.github.io/alex-vidal/photo.json');
   ourRequest.onload = function() {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
       var ourData = JSON.parse(ourRequest.responseText);
@@ -132,7 +132,7 @@ function renderHTML(data) {
     textBox.className = "text-box";
     rectangle.className = "rectangle";
     overlay.className = "overlay";
-    galleryImg.src = 'https://github.com/zanetagorska/alex-vidal/docs/assets/img/portfolio/' + i + '.jpg';
+    galleryImg.src = 'https://zanetagorska.github.io/alex-vidal/docs/assets/img/portfolio/' + i + '.jpg';
     galleryImg.className= "img-responsive";
     portfolioItem.className = "portfolio-item";
     colSm4.className = "col-xs-6 col-sm-4";
