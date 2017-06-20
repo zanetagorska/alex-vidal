@@ -27,7 +27,7 @@ $( function() {
   });
 
   // Menu tło na scroll
-    function init() {
+  function init() {
     window.addEventListener('scroll', function(e){
       var distanceY = window.pageYOffset || document.documentElement.scrollTop,
       shrinkOn = 1,
