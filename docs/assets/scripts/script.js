@@ -132,7 +132,7 @@ function renderHTML(data) {
     textBox.className = "text-box";
     rectangle.className = "rectangle";
     overlay.className = "overlay";
-    galleryImg.src = 'https://zanetagorska.github.io/alex-vidal/docs/assets/img/portfolio/' + i + '.jpg';
+    galleryImg.src = 'https://zanetagorska.github.io/alex-vidal/assets/img/portfolio/' + i + '.jpg';
     galleryImg.className= "img-responsive";
     portfolioItem.className = "portfolio-item";
     colSm4.className = "col-xs-6 col-sm-4";
